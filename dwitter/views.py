@@ -8,9 +8,7 @@ from .forms import DweetForm
 
 # Create your views here.
 
-@login_required
-def HomePage(request):
-    return render(request, 'dwitter/index.html', {})
+
 
 def Register(request):
     if request.method == 'POST':
@@ -37,7 +35,7 @@ def Login(request):
         user = authenticate(request, username=name, password=password)
         if user is not None:
             login(request, user)
-            return redirect('dwitter:home-page')
+            return redirect('dwitter:dashboard')
         else:
             return HttpResponse('Error, user does not exist')
         

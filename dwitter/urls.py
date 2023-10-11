@@ -1,11 +1,11 @@
 from django.urls import path
-from .views import HomePage, dashboard, Register, Login, logoutuser, profile_list, profile
+from .views import  dashboard, Register, Login, logoutuser, profile_list, profile
 
 
 app_name = 'dwitter'
 
 urlpatterns = [
-    path('home/', HomePage, name="home-page"),
+    
     path('register/', Register, name="register-page"),
     path('', Login, name="login-page"),
     path('logout/', logoutuser, name='logout'),
