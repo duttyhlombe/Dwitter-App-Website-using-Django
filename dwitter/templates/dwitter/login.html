@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+</head>
+<body>
+    <div class="parent">
+        <div class="form">
+            <h1>Login</h1>
+            <form action="" method='POST'>
+                {% csrf_token %}
+                
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                <label for="fname">Username:</label>
+                <input type="text" placeholder="Enter your username" name='uname'>
+                </div><br>
+                
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                <label for="fname">Password:</label>
+                <input type="password" placeholder="Enter your  password" name='pass'>
+                </div><br>
+
+                <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                    <button type="submit">Submit</button>
+                    <p>Don't have an account yet? <a href="{% url 'dwitter:register-page' %}">Register</a></p>
+                </div>       
+            </form>
+        </div>
+    </div>        
+</body>
+</html>

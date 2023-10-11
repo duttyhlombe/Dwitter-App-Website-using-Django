@@ -1,0 +1,1 @@
+web gunicorn dwitter.wsgi:application --log-file -
