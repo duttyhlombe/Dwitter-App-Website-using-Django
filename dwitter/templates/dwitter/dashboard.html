@@ -2,7 +2,25 @@
 
 {% block content %}
 
-<button style="position: fixed; top: 10%; left: 78%;"><a href="{% url 'dwitter:logout' %}">Logout</a></button>
+
+<a href="{% url 'dwitter:logout' %}" style="position: fixed; top: 6.5%; left: 78%; padding: 10px 20px; background-color: #007bff; color: #fff; text-decoration: none; border-radius: 5px; display: block; width: 100px; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+    <span style="font-size: 16px;">Logout</span>
+  </a>
+  <style>
+    /* Media query for screens with a maximum width of 768px */
+    @media (max-width: 768px) {
+      a {
+        left: auto; /* Reset the 'left' property for centering on small screens */
+        right: 2%; /* Add a right value to center on small screens */
+      }
+      span {
+        font-size: 14px; /* Decrease the font size for small screens */
+      }
+    }
+  </style>
+  
+
+
 
 
 <div class="column">
